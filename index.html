@@ -1,10 +1,107 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prateek Road Carriers Private Limited</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+    body{background:#fff;color:#10233f}
+    header{padding:18px 8%;display:flex;justify-content:space-between;align-items:center;background:#fff;box-shadow:0 2px 12px #ddd;position:sticky;top:0;z-index:10}
+    .brand{font-size:20px;font-weight:800;color:#0B3C88}
+    .brand span{color:#F58220}
+    nav a{margin-left:20px;text-decoration:none;color:#0B3C88;font-weight:600}
+    .hero{min-height:85vh;padding:80px 8%;background:linear-gradient(90deg,rgba(11,60,136,.92),rgba(11,60,136,.75)),url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center;color:white;display:flex;align-items:center}
+    .hero h1{font-size:48px;max-width:750px;margin-bottom:20px}
+    .hero p{font-size:20px;max-width:650px;line-height:1.6;margin-bottom:30px}
+    .btn{display:inline-block;padding:14px 24px;background:#F58220;color:white;text-decoration:none;border-radius:6px;font-weight:700;margin-right:10px}
+    .btn.secondary{background:white;color:#0B3C88}
+    section{padding:70px 8%}
+    h2{text-align:center;font-size:34px;color:#0B3C88;margin-bottom:35px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:25px}
+    .card{padding:28px;background:#fff;border-radius:12px;box-shadow:0 4px 18px #ddd;border-top:4px solid #F58220}
+    .card h3{color:#0B3C88;margin-bottom:12px}
+    .about{background:#f5f8fc}
+    .about p,.card p{line-height:1.7;color:#333}
+    .cta{background:#0B3C88;color:white;text-align:center}
+    .cta h2{color:white}
+    footer{background:#071d3a;color:white;padding:40px 8%;line-height:1.8}
+    footer a{color:white;text-decoration:none}
+    .floating{position:fixed;right:18px;bottom:18px;z-index:20}
+    .floating a{display:block;background:#25D366;color:white;padding:14px 18px;border-radius:30px;text-decoration:none;font-weight:700}
+    @media(max-width:768px){
+      nav{display:none}
+      .hero h1{font-size:34px}
+      .hero p{font-size:17px}
+      h2{font-size:28px}
+    }
+  </style>
 </head>
 <body>
-  <h1>PRATEEK ROAD CARRIERS PRIVATE LIMITED</h1>
+
+<header>
+  <div class="brand">PRATEEK <span>ROAD CARRIERS</span></div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h1>Reliable Road Transport Solutions Across India</h1>
+    <p>Prateek Road Carriers Private Limited provides professional road freight, logistics coordination and transport solutions through a trusted Pan India transporter network.</p>
+    <a class="btn" href="tel:+918978677859">Call Now</a>
+    <a class="btn secondary" href="https://wa.me/918978677859">WhatsApp</a>
+  </div>
+</div>
+
+<section id="about" class="about">
+  <h2>About Us</h2>
+  <p>
+    Prateek Road Carriers Private Limited is a Hyderabad-based transport and logistics company offering reliable road transportation solutions across India. We connect businesses with dependable transport partners to ensure safe, timely and efficient movement of goods.
+  </p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="card"><h3>Full Truck Load</h3><p>End-to-end FTL transport solutions for bulk and commercial goods.</p></div>
+    <div class="card"><h3>Part Load Transport</h3><p>Flexible part-load movement through trusted logistics partners.</p></div>
+    <div class="card"><h3>Pan India Logistics</h3><p>Reliable road transport coordination across major Indian routes.</p></div>
+    <div class="card"><h3>Industrial Goods</h3><p>Safe movement of commercial, industrial and business consignments.</p></div>
+  </div>
+</section>
+
+<section class="about">
+  <h2>Why Choose Us</h2>
+  <div class="grid">
+    <div class="card"><h3>Trusted Network</h3><p>Strong transporter network for smooth goods movement.</p></div>
+    <div class="card"><h3>Timely Delivery</h3><p>Focused on commitment, coordination and delivery timelines.</p></div>
+    <div class="card"><h3>Professional Support</h3><p>Dedicated communication for transport enquiries and updates.</p></div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Need Transport Support?</h2>
+  <p>Contact us today for reliable Pan India road freight solutions.</p><br>
+  <a class="btn" href="https://wa.me/918978677859">Request a Quote</a>
+</section>
+
+<footer id="contact">
+  <h3>PRATEEK ROAD CARRIERS PRIVATE LIMITED</h3>
   <p>Delivering Trust Across Miles</p>
+  <p><strong>Phone / WhatsApp:</strong> +91 89786 77859</p>
+  <p><strong>Email:</strong> manish@prateekroadcarriers.com | director@prateekroadcarriers.com</p>
+  <p><strong>Address:</strong> 3-6-610/1, 2nd Floor, Street Number 8, Opposite to Howard Public School, Himayatnagar, Hyderabad - 500029.</p>
+</footer>
+
+<div class="floating">
+  <a href="https://wa.me/918978677859">WhatsApp</a>
+</div>
+
 </body>
 </html>
