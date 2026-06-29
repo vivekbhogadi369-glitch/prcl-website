@@ -56,7 +56,7 @@
     .hero h1{font-size:58px;line-height:1.12;margin-bottom:24px;font-weight:900}
     .hero p{font-size:21px;line-height:1.7;max-width:720px;margin-bottom:34px;color:#f2f2f2}
 
-    .hero-buttons a,.preview-btn{
+    .hero-buttons a,.main-btn{
       display:inline-block;
       text-decoration:none;
       padding:16px 28px;
@@ -67,7 +67,7 @@
       font-size:16px;
     }
 
-    .btn-orange,.preview-btn{background:#F58220;color:#fff}
+    .btn-orange,.main-btn{background:#F58220;color:#fff}
     .btn-white{background:#fff;color:#0B3C88}
 
     .stats{display:flex;gap:18px;margin-top:34px;flex-wrap:wrap}
@@ -77,20 +77,14 @@
 
     section{padding:75px 7%}
     .section-title{text-align:center;font-size:38px;color:#0B3C88;margin-bottom:18px}
-    .section-subtitle{text-align:center;max-width:780px;margin:0 auto 35px;color:#555;line-height:1.7;font-size:18px}
+    .section-subtitle{text-align:center;max-width:760px;margin:0 auto 40px;color:#555;line-height:1.7;font-size:18px}
 
-    .about{background:#f5f8fc;text-align:center}
-    .services{background:#fff;text-align:center}
-    .why{background:#f5f8fc;text-align:center}
-
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px;margin-top:30px}
-    .card{background:#fff;padding:30px;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.08);border-top:5px solid #F58220;text-align:left}
+    .home-summary{background:#f5f8fc;text-align:center}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin-top:30px}
+    .card{background:#fff;padding:32px;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.08);border-top:5px solid #F58220;text-align:center}
     .card h3{color:#0B3C88;font-size:22px;margin-bottom:12px}
-    .card p{color:#444;line-height:1.7;font-size:16px}
-
-    .network-preview{background:linear-gradient(90deg,#0B3C88,#092b62);color:#fff;text-align:center}
-    .network-preview h2{color:#fff}
-    .network-preview p{max-width:850px;margin:0 auto 25px;line-height:1.8;font-size:18px}
+    .card p{color:#444;line-height:1.7;font-size:16px;margin-bottom:18px}
+    .card a{color:#F58220;font-weight:900;text-decoration:none}
 
     .cta{background:#F58220;color:#fff;text-align:center}
     .cta h2{font-size:36px;margin-bottom:15px}
@@ -100,7 +94,6 @@
     footer{background:#071d3a;color:#fff;padding:45px 7%;line-height:1.8}
     footer h3{font-size:24px;margin-bottom:10px}
     footer p{color:#eee}
-    footer a{color:#fff;text-decoration:none}
 
     .whatsapp-float{
       position:fixed;
@@ -172,56 +165,38 @@
   </div>
 </section>
 
-<section class="about">
-  <h2 class="section-title">About Prateek Road Carriers</h2>
+<section class="home-summary">
+  <h2 class="section-title">Explore Prateek Road Carriers</h2>
 
   <p class="section-subtitle">
-    Prateek Road Carriers Private Limited is a Hyderabad-based transport and logistics company serving businesses across India with dependable road freight coordination, timely delivery and professional customer support.
-  </p>
-
-  <a class="preview-btn" href="about.html">Read More</a>
-</section>
-
-<section class="services">
-  <h2 class="section-title">Our Core Services</h2>
-
-  <p class="section-subtitle">
-    We provide practical and reliable road transport solutions for commercial, industrial and business consignments.
+    Learn more about our company, transport services, nationwide network and contact details through the dedicated pages below.
   </p>
 
   <div class="grid">
-    <div class="card"><h3>Full Truck Load</h3><p>Dedicated FTL solutions for bulk and business consignments.</p></div>
-    <div class="card"><h3>Part Load Transport</h3><p>Flexible part-load transport support through trusted logistics partners.</p></div>
-    <div class="card"><h3>Pan India Freight</h3><p>Road freight coordination across major Indian states and commercial routes.</p></div>
+    <div class="card">
+      <h3>About Us</h3>
+      <p>Know more about PRCL, our business background, values and growth journey.</p>
+      <a href="about.html">Read More</a>
+    </div>
+
+    <div class="card">
+      <h3>Our Services</h3>
+      <p>Explore our road freight, full truck load, part load and industrial logistics services.</p>
+      <a href="services.html">View Services</a>
+    </div>
+
+    <div class="card">
+      <h3>Pan India Network</h3>
+      <p>See how PRCL supports transport movement across major Indian routes and business hubs.</p>
+      <a href="network.html">Explore Network</a>
+    </div>
+
+    <div class="card">
+      <h3>Contact Us</h3>
+      <p>Connect with PRCL for transport enquiries, quotes and business coordination.</p>
+      <a href="contact.html">Contact Now</a>
+    </div>
   </div>
-
-  <br>
-  <a class="preview-btn" href="services.html">View All Services</a>
-</section>
-
-<section class="why">
-  <h2 class="section-title">Why Choose PRCL</h2>
-
-  <p class="section-subtitle">
-    We combine business experience, trusted transport coordination and customer-focused service to deliver reliable logistics support.
-  </p>
-
-  <div class="grid">
-    <div class="card"><h3>Reliable Coordination</h3><p>Strong planning and communication for smooth goods movement.</p></div>
-    <div class="card"><h3>Timely Delivery</h3><p>Focused on commitments, schedules and professional follow-up.</p></div>
-    <div class="card"><h3>Business Trust</h3><p>Built for corporate clients, traders, manufacturers and distributors.</p></div>
-  </div>
-</section>
-
-<section class="network-preview">
-  <h2 class="section-title">Pan India Transport Network</h2>
-
-  <p>
-    From Hyderabad to key industrial and commercial destinations across India,
-    PRCL supports businesses with reliable road transportation and logistics coordination.
-  </p>
-
-  <a class="preview-btn" href="network.html">Explore Network</a>
 </section>
 
 <section class="cta">
