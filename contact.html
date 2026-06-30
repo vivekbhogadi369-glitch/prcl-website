@@ -8,17 +8,6 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 body{background:#fff;color:#10233f}
-html{scroll-behavior:smooth}
-
-.topbar{
-background:#071d3a;
-color:#fff;
-padding:9px 7%;
-display:flex;
-justify-content:space-between;
-font-size:14px;
-font-weight:700
-}
 
 header{
 width:100%;
@@ -34,43 +23,54 @@ box-shadow:0 4px 18px rgba(0,0,0,.08)
 }
 
 .logo img{height:130px;width:auto;display:block}
-nav a{text-decoration:none;margin-left:26px;color:#0B3C88;font-weight:800;font-size:17px}
-nav a.active{color:#F58220}
 
-.quote-btn{
-background:#071d3a;
-color:#fff!important;
-padding:14px 22px;
-border-radius:8px
+nav a{
+text-decoration:none;
+margin-left:26px;
+color:#0B3C88;
+font-weight:800;
+font-size:17px
 }
 
+nav a.active{color:#F58220}
+
 .hero{
-padding:120px 7%;
-background:linear-gradient(90deg,rgba(7,29,58,.92),rgba(7,29,58,.45)),
+padding:110px 7%;
+background:linear-gradient(90deg,rgba(7,29,58,.92),rgba(7,29,58,.48)),
 url("https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=80");
 background-size:cover;
 background-position:center;
 color:#fff
 }
 
-.hero h1{font-size:58px;margin-bottom:20px}
-.hero p{font-size:20px;max-width:720px;line-height:1.7;margin-bottom:28px}
-
-.hero-buttons a{
-display:inline-block;
-padding:15px 26px;
-border-radius:8px;
-text-decoration:none;
-font-weight:900;
-margin-right:12px
-}
-.call{background:#F58220;color:#fff}
-.whatsapp{background:#25D366;color:#fff}
+.hero h1{font-size:56px;margin-bottom:18px}
+.hero p{font-size:20px;max-width:720px;line-height:1.7}
 
 section{padding:75px 7%}
-.small-title{text-align:center;color:#F58220;font-weight:900;letter-spacing:1px;margin-bottom:10px}
-.section-title{text-align:center;font-size:40px;color:#0B3C88;margin-bottom:15px}
-.section-subtitle{text-align:center;max-width:780px;margin:0 auto 45px;color:#555;line-height:1.8;font-size:18px}
+
+.small-title{
+text-align:center;
+color:#F58220;
+font-weight:900;
+letter-spacing:1px;
+margin-bottom:10px
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+color:#0B3C88;
+margin-bottom:15px
+}
+
+.section-subtitle{
+text-align:center;
+max-width:780px;
+margin:0 auto 45px;
+color:#555;
+line-height:1.8;
+font-size:18px
+}
 
 .info-grid{
 display:grid;
@@ -80,12 +80,14 @@ gap:28px
 
 .info-card{
 background:#fff;
-padding:35px;
+padding:35px 25px;
 border-radius:16px;
 box-shadow:0 10px 30px rgba(0,0,0,.10);
 text-align:center;
-border-bottom:5px solid #F58220
+border-bottom:5px solid #F58220;
+min-height:260px
 }
+
 .icon{
 width:70px;
 height:70px;
@@ -98,27 +100,25 @@ justify-content:center;
 margin:0 auto 20px;
 font-size:28px
 }
+
 .info-card h3{color:#0B3C88;font-size:22px;margin-bottom:14px}
-.info-card p{color:#444;line-height:1.8;font-size:16px}
+.info-card p{color:#444;line-height:1.8;font-size:15px;word-break:break-word}
 .info-card strong{color:#F58220;font-size:20px}
 
 .contact-section{background:#f5f8fc}
-.contact-layout{
-display:grid;
-grid-template-columns:1.4fr .8fr;
-gap:30px
-}
 
-.form-box,.quick-box{
+.form-box{
+max-width:850px;
+margin:auto;
 background:#fff;
-padding:35px;
+padding:38px;
 border-radius:16px;
 box-shadow:0 10px 30px rgba(0,0,0,.10)
 }
 
-.form-box h3,.quick-box h3{
+.form-box h3{
 color:#0B3C88;
-font-size:25px;
+font-size:26px;
 margin-bottom:25px
 }
 
@@ -138,6 +138,7 @@ font-size:15px
 }
 
 textarea{height:130px;resize:none}
+
 button{
 width:100%;
 padding:16px;
@@ -149,19 +150,8 @@ font-weight:900;
 font-size:16px
 }
 
-.quick-box{
-background:#071d3a;
-color:#fff
-}
-.quick-item{
-border-bottom:1px solid rgba(255,255,255,.2);
-padding:18px 0
-}
-.quick-item:last-child{border-bottom:none}
-.quick-item h4{color:#fff;margin-bottom:6px}
-.quick-item p{color:#e5e5e5;line-height:1.7}
+.map-section{padding-top:65px}
 
-.map-section{padding-top:0}
 .map{
 border-radius:16px;
 overflow:hidden;
@@ -171,22 +161,9 @@ box-shadow:0 10px 30px rgba(0,0,0,.12)
 footer{
 background:#071d3a;
 color:#fff;
-padding:55px 7% 30px
-}
-.footer-grid{
-display:grid;
-grid-template-columns:1.4fr 1fr 1fr 1.3fr;
-gap:35px
-}
-footer h3,footer h4{margin-bottom:16px}
-footer p,footer a{color:#e5e5e5;line-height:1.8;text-decoration:none;display:block}
-.footer-logo img{height:90px;margin-bottom:15px}
-.copyright{
-border-top:1px solid rgba(255,255,255,.15);
-margin-top:35px;
-padding-top:20px;
+padding:22px 7%;
 text-align:center;
-color:#ccc
+font-size:14px
 }
 
 .whatsapp-float{
@@ -204,26 +181,19 @@ box-shadow:0 6px 18px rgba(0,0,0,.25)
 }
 
 @media(max-width:768px){
-.topbar{display:none}
 header{padding:14px 6%}
 .logo img{height:95px}
 nav{display:none}
 .hero{padding:90px 6%}
 .hero h1{font-size:40px}
-.hero-buttons a{display:block;margin-bottom:12px;text-align:center}
 section{padding:60px 6%}
 .section-title{font-size:32px}
-.contact-layout,.footer-grid,.form-row{grid-template-columns:1fr}
+.form-row{grid-template-columns:1fr}
 }
 </style>
 </head>
 
 <body>
-
-<div class="topbar">
-  <div>Delivering Trust Across Miles</div>
-  <div>+91 89786 77859 | manish@prateekroadcarriers.com</div>
-</div>
 
 <header>
   <div class="logo">
@@ -236,7 +206,6 @@ section{padding:60px 6%}
     <a href="services.html">Services</a>
     <a href="network.html">Network</a>
     <a class="active" href="contact.html">Contact</a>
-    <a class="quote-btn" href="https://wa.me/918978677859">Request a Quote</a>
   </nav>
 </header>
 
@@ -246,11 +215,6 @@ section{padding:60px 6%}
     Whether you need transport support, a freight quotation or business partnership,
     our team is ready to assist you with reliable Pan India logistics solutions.
   </p>
-
-  <div class="hero-buttons">
-    <a class="call" href="tel:+918978677859">Call Now</a>
-    <a class="whatsapp" href="https://wa.me/918978677859">WhatsApp</a>
-  </div>
 </section>
 
 <section>
@@ -280,55 +244,31 @@ section{padding:60px 6%}
       <h3>Office Address</h3>
       <p>
         3-6-610/1, 2nd Floor,<br>
-        Street No.8, Opp. Howard Public School,<br>
-        Himayatnagar, Hyderabad - 500029
+        Street No.8,<br>
+        Opp. Howard Public School,<br>
+        Himayatnagar,<br>
+        Hyderabad - 500029
       </p>
     </div>
   </div>
 </section>
 
 <section class="contact-section">
-  <div class="contact-layout">
-    <div class="form-box">
-      <h3>Send Us a Message</h3>
+  <div class="form-box">
+    <h3>Send Us a Message</h3>
 
-      <form action="https://wa.me/918978677859">
-        <div class="form-row">
-          <input type="text" placeholder="Your Name">
-          <input type="tel" placeholder="Phone Number">
-        </div>
-
-        <input type="email" placeholder="Email Address">
-        <input type="text" placeholder="Subject">
-        <textarea placeholder="Type your message here..."></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-
-    <div class="quick-box">
-      <h3>Quick Connect</h3>
-
-      <div class="quick-item">
-        <h4>Call Us</h4>
-        <p>+91 89786 77859<br>Monday - Saturday</p>
+    <form action="https://wa.me/918978677859">
+      <div class="form-row">
+        <input type="text" placeholder="Your Name">
+        <input type="tel" placeholder="Phone Number">
       </div>
 
-      <div class="quick-item">
-        <h4>WhatsApp</h4>
-        <p>+91 89786 77859<br>Quick response on WhatsApp</p>
-      </div>
+      <input type="email" placeholder="Email Address">
+      <input type="text" placeholder="Subject">
+      <textarea placeholder="Type your message here..."></textarea>
 
-      <div class="quick-item">
-        <h4>Email Us</h4>
-        <p>manish@prateekroadcarriers.com<br>director@prateekroadcarriers.com</p>
-      </div>
-
-      <div class="quick-item">
-        <h4>Business Hours</h4>
-        <p>Monday - Saturday<br>9:00 AM - 7:00 PM</p>
-      </div>
-    </div>
+      <button type="submit">Send Message</button>
+    </form>
   </div>
 </section>
 
@@ -338,7 +278,7 @@ section{padding:60px 6%}
 
   <div class="map">
     <iframe
-      src="https://www.google.com/maps?q=3-6-610/1,2nd%20Floor,Street%20Number%208,Opposite%20to%20Howard%20Public%20School,Himayatnagar,Hyderabad%20500029&output=embed"
+      src="https://www.google.com/maps?q=Howard%20Public%20School,%20Himayatnagar,%20Hyderabad%20500029&output=embed"
       width="100%"
       height="450"
       style="border:0;"
@@ -348,43 +288,7 @@ section{padding:60px 6%}
 </section>
 
 <footer>
-  <div class="footer-grid">
-    <div>
-      <div class="footer-logo">
-        <img src="file_000000003c9871f5a6f0ba67ef7f0c51.png" alt="PRCL Logo">
-      </div>
-      <p>Reliable road transport services across India, connecting businesses with trust, efficiency and commitment.</p>
-    </div>
-
-    <div>
-      <h4>Quick Links</h4>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="services.html">Services</a>
-      <a href="network.html">Network</a>
-      <a href="contact.html">Contact</a>
-    </div>
-
-    <div>
-      <h4>Our Services</h4>
-      <p>Full Truck Load</p>
-      <p>Part Load Transport</p>
-      <p>Industrial Logistics</p>
-      <p>Pan India Transport</p>
-    </div>
-
-    <div>
-      <h4>Contact Info</h4>
-      <p>+91 89786 77859</p>
-      <p>manish@prateekroadcarriers.com</p>
-      <p>director@prateekroadcarriers.com</p>
-      <p>3-6-610/1, 2nd Floor, Street No.8, Himayatnagar, Hyderabad - 500029</p>
-    </div>
-  </div>
-
-  <div class="copyright">
-    © 2026 Prateek Road Carriers Private Limited. All Rights Reserved.
-  </div>
+  © 2026 Prateek Road Carriers Private Limited. All Rights Reserved.
 </footer>
 
 <a class="whatsapp-float" href="https://wa.me/918978677859">WhatsApp</a>
