@@ -53,14 +53,19 @@
 }
 .ticker-track{
       display:inline-block;
-      padding-left:100%;
+      white-space:nowrap;
+      will-change:transform;
       animation:tickerMove 42s linear infinite;
 }
     
-    @keyframes tickerMove{
-      0%{transform:translateX(0)}
-      100%{transform:translateX(-100%)}
+@keyframes tickerMove{
+    from{
+        transform:translateX(100%);
     }
+    to{
+        transform:translateX(-100%);
+    }
+}
 
     .hero{
       min-height:92vh;
@@ -163,12 +168,11 @@
     <a href="contact.html">Contact</a>
   </nav>
 </header>
-
-<div class="ticker-track">
-
-  <div class="ticker-track">
-  PAN INDIA ROAD TRANSPORT &nbsp;&nbsp;|&nbsp;&nbsp; FULL TRUCK LOAD SOLUTIONS &nbsp;&nbsp;|&nbsp;&nbsp; PART LOAD TRANSPORT &nbsp;&nbsp;|&nbsp;&nbsp; INDUSTRIAL GOODS MOVEMENT &nbsp;&nbsp;|&nbsp;&nbsp; COMMERCIAL LOGISTICS &nbsp;&nbsp;|&nbsp;&nbsp; TIMELY DELIVERY SUPPORT &nbsp;&nbsp;|&nbsp;&nbsp; TRUSTED TRANSPORT COORDINATION
-  </div>
+<div class="ticker">
+    <div class="ticker-track">
+        🚛 Full Truck Load • 📦 Part Load Transport • 🏭 Industrial Logistics • 🇮🇳 Pan India Network • ⏱ Timely Delivery • 🤝 Trusted Logistics Partner • Delivering Trust Across Miles
+    </div>
+</div>
 
 <section class="hero">
   <div class="hero-content">
