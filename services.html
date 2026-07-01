@@ -8,13 +8,40 @@
   <style>
     *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
     body{background:#fff;color:#10233f}
+    html{scroll-behavior:smooth}
+
     header{width:100%;padding:20px 7%;background:#fff;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:999;min-height:120px;box-shadow:0 4px 18px rgba(0,0,0,.08)}
     .logo img{height:150px;width:auto;display:block;object-fit:contain}
     nav a{text-decoration:none;margin-left:26px;color:#0B3C88;font-weight:800;font-size:17px}
 
+    .ticker{
+      background:#0B3C88;
+      color:#ffffff;
+      overflow:hidden;
+      white-space:nowrap;
+      padding:9px 0;
+      font-weight:700;
+      font-size:15px;
+      letter-spacing:1px;
+      border-top:1px solid rgba(255,255,255,.08);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .ticker-track{
+      display:inline-block;
+      white-space:nowrap;
+      will-change:transform;
+      animation:tickerMove 25s linear infinite;
+    }
+
+    @keyframes tickerMove{
+      from{transform:translateX(100%)}
+      to{transform:translateX(-100%)}
+    }
+
     .page-hero{padding:120px 7%;color:#fff;background:linear-gradient(90deg,rgba(11,60,136,.95),rgba(11,60,136,.65)),url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80");background-size:cover;background-position:center}
     .page-hero h1{font-size:52px;margin-bottom:18px}
-    .page-hero p{font-size:20px;max-width:760px;line-height:1.7}
+    .page-hero p{font-size:20px;max-width:850px;line-height:1.7}
 
     section{padding:75px 7%}
     .section-title{text-align:center;font-size:38px;color:#0B3C88;margin-bottom:18px}
@@ -33,12 +60,14 @@
     footer{background:#071d3a;color:#fff;padding:45px 7%;line-height:1.8}
     footer h3{font-size:24px;margin-bottom:10px}
     footer p{color:#eee}
+
     .whatsapp-float{position:fixed;right:18px;bottom:18px;background:#25D366;color:#fff;padding:15px 22px;border-radius:40px;text-decoration:none;font-weight:800;z-index:1000;box-shadow:0 6px 18px rgba(0,0,0,.25)}
 
     @media(max-width:768px){
       header{padding:14px 6%;min-height:95px}
       nav{display:none}
       .logo img{height:95px}
+      .ticker{font-size:14px;padding:11px 0}
       .page-hero{padding:90px 6%}
       .page-hero h1{font-size:38px}
       section{padding:60px 6%}
@@ -53,6 +82,7 @@
   <div class="logo">
     <img src="file_000000003c9871f5a6f0ba67ef7f0c51.png" alt="Prateek Road Carriers Logo">
   </div>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
@@ -62,13 +92,21 @@
   </nav>
 </header>
 
+<div class="ticker">
+  <div class="ticker-track">
+    FULL TRUCK LOAD (FTL) • PART LOAD (PTL) • INDUSTRIAL FREIGHT • TIME-BOUND DELIVERY • PAN INDIA ROAD TRANSPORT • CUSTOMIZED LOGISTICS SOLUTIONS • SAFE & RELIABLE GOODS MOVEMENT
+  </div>
+</div>
+
 <section class="page-hero">
-  <h1>Our Services</h1>
-  <p>Reliable, professional and scalable road transport solutions for businesses across India.</p>
+  <h1>Reliable Transport Solutions Across India</h1>
+  <p>
+    Hyderabad-based Prateek Road Carriers Private Limited offers dependable Full Truck Load (FTL), Part Load (PTL), industrial freight, commercial logistics and Pan India transportation solutions tailored to diverse business requirements.
+  </p>
 </section>
 
 <section>
-  <h2 class="section-title">Transport Solutions We Offer</h2>
+  <h2 class="section-title">Our Logistics & Transport Services</h2>
   <p class="section-subtitle">
     PRCL provides dependable logistics coordination for commercial, industrial and business consignments through a trusted Pan India transporter network.
   </p>
@@ -107,21 +145,32 @@
 </section>
 
 <section class="light">
-  <h2 class="section-title">Why Choose PRCL Services?</h2>
+  <h2 class="section-title">Why Businesses Choose PRCL</h2>
   <p class="section-subtitle">
-    Our service approach is built on trust, communication, route coordination and customer commitment.
+    Businesses across India choose PRCL for dependable transport coordination, timely deliveries, transparent communication and customer-focused logistics support.
   </p>
 
   <div class="grid">
-    <div class="card"><h3>Trusted Transporter Network</h3><p>We coordinate with dependable transport partners for smooth goods movement.</p></div>
-    <div class="card"><h3>Professional Communication</h3><p>Customers receive clear support for enquiries, quotations and transport updates.</p></div>
-    <div class="card"><h3>Business-Focused Approach</h3><p>Our services are designed for manufacturers, traders, distributors and corporate clients.</p></div>
+    <div class="card">
+      <h3>Trusted Transporter Network</h3>
+      <p>We coordinate with dependable transport partners for smooth goods movement.</p>
+    </div>
+
+    <div class="card">
+      <h3>Professional Communication</h3>
+      <p>Customers receive clear support for enquiries, quotations and transport updates.</p>
+    </div>
+
+    <div class="card">
+      <h3>Business-Focused Approach</h3>
+      <p>Our services are designed for manufacturers, traders, distributors and corporate clients.</p>
+    </div>
   </div>
 </section>
 
 <section class="cta">
-  <h2>Need a Transport Quote?</h2>
-  <p>Contact PRCL for reliable road freight and logistics support.</p>
+  <h2>Ready to Move Your Goods Across India?</h2>
+  <p>Speak with our logistics team today for dependable, timely and cost-effective transportation solutions.</p>
   <a href="https://wa.me/918978677859">Request a Quote</a>
 </section>
 
