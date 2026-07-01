@@ -4,25 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | Prateek Road Carriers Private Limited</title>
+
   <style>
     *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
     body{background:#fff;color:#10233f}
+    html{scroll-behavior:smooth}
+
     header{width:100%;padding:20px 7%;background:#fff;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:999;min-height:120px;box-shadow:0 4px 18px rgba(0,0,0,.08)}
     .logo img{height:150px;width:auto;display:block;object-fit:contain}
     nav a{text-decoration:none;margin-left:26px;color:#0B3C88;font-weight:800;font-size:17px}
 
+    .ticker{
+      background:#0B3C88;
+      color:#ffffff;
+      overflow:hidden;
+      white-space:nowrap;
+      padding:9px 0;
+      font-weight:700;
+      font-size:15px;
+      letter-spacing:1px;
+    }
+
+    .ticker-track{
+      display:inline-block;
+      white-space:nowrap;
+      animation:tickerMove 30s linear infinite;
+    }
+
+    @keyframes tickerMove{
+      from{transform:translateX(100%)}
+      to{transform:translateX(-100%)}
+    }
+
     .page-hero{padding:120px 7%;color:#fff;background:linear-gradient(90deg,rgba(11,60,136,.95),rgba(11,60,136,.7)),url("https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1600&q=80");background-size:cover;background-position:center}
     .page-hero h1{font-size:52px;margin-bottom:18px}
-    .page-hero p{font-size:20px;max-width:760px;line-height:1.7}
+    .page-hero p{font-size:20px;max-width:850px;line-height:1.7}
 
     section{padding:75px 7%}
     .section-title{text-align:center;font-size:38px;color:#0B3C88;margin-bottom:18px}
-    .section-subtitle{text-align:center;max-width:850px;margin:0 auto 45px;color:#555;line-height:1.8;font-size:18px}
+    .section-subtitle{text-align:center;max-width:900px;margin:0 auto 45px;color:#555;line-height:1.8;font-size:18px}
+
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
     .card{background:#fff;padding:32px;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.08);border-top:5px solid #F58220}
     .card h3{color:#0B3C88;font-size:22px;margin-bottom:12px}
     .card p{color:#444;line-height:1.7;font-size:16px}
+
     .light{background:#f5f8fc}
+
     .cta{background:#F58220;color:#fff;text-align:center}
     .cta h2{font-size:36px;margin-bottom:15px}
     .cta p{font-size:18px;margin-bottom:25px}
@@ -31,12 +59,14 @@
     footer{background:#071d3a;color:#fff;padding:45px 7%;line-height:1.8}
     footer h3{font-size:24px;margin-bottom:10px}
     footer p{color:#eee}
+
     .whatsapp-float{position:fixed;right:18px;bottom:18px;background:#25D366;color:#fff;padding:15px 22px;border-radius:40px;text-decoration:none;font-weight:800;z-index:1000;box-shadow:0 6px 18px rgba(0,0,0,.25)}
 
     @media(max-width:768px){
       header{padding:14px 6%;min-height:95px}
       nav{display:none}
       .logo img{height:95px}
+      .ticker{font-size:14px;padding:11px 0}
       .page-hero{padding:90px 6%}
       .page-hero h1{font-size:38px}
       section{padding:60px 6%}
@@ -44,12 +74,14 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="logo">
     <img src="file_000000003c9871f5a6f0ba67ef7f0c51.png" alt="Prateek Road Carriers Logo">
   </div>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
@@ -59,34 +91,80 @@
   </nav>
 </header>
 
+<div class="ticker">
+  <div class="ticker-track">
+    HYDERABAD BASED LOGISTICS COMPANY • TRUSTED ROAD TRANSPORT PARTNER • PAN INDIA FREIGHT SOLUTIONS • PROFESSIONAL LOGISTICS COORDINATION • CUSTOMER FIRST APPROACH • DELIVERING TRUST ACROSS MILES
+  </div>
+</div>
+
 <section class="page-hero">
   <h1>About Prateek Road Carriers</h1>
-  <p>Driven by trust, strengthened by experience, and committed to reliable road transport solutions across India.</p>
+  <p>
+    Hyderabad-based Prateek Road Carriers Private Limited is committed to delivering dependable road transport and logistics solutions across India through professionalism, reliability and long-term business relationships.
+  </p>
 </section>
 
 <section>
   <h2 class="section-title">Who We Are</h2>
   <p class="section-subtitle">
-    Prateek Road Carriers Private Limited is a Hyderabad-based transportation and logistics company serving businesses across India. With an annual turnover exceeding ₹15 crore, PRCL has built its reputation through dependable coordination, timely communication, customer commitment and professional transport solutions.
+    Prateek Road Carriers Private Limited is a Hyderabad-based road transport and logistics company providing dependable Full Truck Load (FTL), Part Load (PTL), industrial freight and Pan India transportation solutions. With an annual turnover exceeding ₹15 crore, PRCL has earned the trust of manufacturers, distributors, traders and businesses through reliable coordination, timely deliveries, professional service and a strong customer-first approach.
   </p>
 </section>
 
 <section class="light">
   <h2 class="section-title">Our Foundation</h2>
+
   <div class="grid">
-    <div class="card"><h3>Our Vision</h3><p>To become a trusted Pan India road transport partner known for reliability, professionalism and long-term customer relationships.</p></div>
-    <div class="card"><h3>Our Mission</h3><p>To support businesses with safe, timely and efficient road freight coordination through a dependable transporter network.</p></div>
-    <div class="card"><h3>Our Promise</h3><p>To deliver every transport commitment with transparency, responsibility and customer-focused service.</p></div>
+    <div class="card">
+      <h3>Our Vision</h3>
+      <p>To become a trusted Pan India road transport partner known for reliability, professionalism and long-term customer relationships.</p>
+    </div>
+
+    <div class="card">
+      <h3>Our Mission</h3>
+      <p>To support businesses with safe, timely and efficient road freight coordination through a dependable transporter network.</p>
+    </div>
+
+    <div class="card">
+      <h3>Our Promise</h3>
+      <p>To deliver every transport commitment with transparency, responsibility and customer-focused service.</p>
+    </div>
   </div>
 </section>
 
 <section>
   <h2 class="section-title">Core Values</h2>
+
   <div class="grid">
-    <div class="card"><h3>Trust</h3><p>We believe long-term business is built through honesty, dependable service and consistent communication.</p></div>
-    <div class="card"><h3>Reliability</h3><p>Our transport coordination focuses on timely planning, route support and smooth goods movement.</p></div>
-    <div class="card"><h3>Professionalism</h3><p>We maintain a corporate approach in customer handling, documentation and logistics support.</p></div>
-    <div class="card"><h3>Nationwide Reach</h3><p>PRCL supports transport movement across major Indian routes through a trusted network.</p></div>
+    <div class="card">
+      <h3>Trust</h3>
+      <p>We believe long-term business is built through honesty, dependable service and consistent communication.</p>
+    </div>
+
+    <div class="card">
+      <h3>Reliability</h3>
+      <p>Our transport coordination focuses on timely planning, route support and smooth goods movement.</p>
+    </div>
+
+    <div class="card">
+      <h3>Professionalism</h3>
+      <p>We maintain a corporate approach in customer handling, documentation and logistics support.</p>
+    </div>
+
+    <div class="card">
+      <h3>Nationwide Reach</h3>
+      <p>PRCL supports transport movement across major Indian routes through a trusted network.</p>
+    </div>
+
+    <div class="card">
+      <h3>Safety</h3>
+      <p>Every consignment is handled with care, operational discipline and a commitment to secure transportation.</p>
+    </div>
+
+    <div class="card">
+      <h3>Commitment</h3>
+      <p>We build long-term business relationships through transparency, accountability and dependable logistics support.</p>
+    </div>
   </div>
 </section>
 
