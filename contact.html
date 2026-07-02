@@ -8,6 +8,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 body{background:#fff;color:#10233f}
+html{scroll-behavior:smooth}
 
 header{
 width:100%;
@@ -32,6 +33,29 @@ font-weight:800;
 font-size:17px
 }
 
+.ticker{
+background:#0B3C88;
+color:#fff;
+overflow:hidden;
+white-space:nowrap;
+padding:9px 0;
+font-weight:700;
+font-size:15px;
+letter-spacing:1px
+}
+
+.ticker-track{
+display:inline-block;
+white-space:nowrap;
+will-change:transform;
+animation:tickerMove 30s linear infinite
+}
+
+@keyframes tickerMove{
+from{transform:translateX(100%)}
+to{transform:translateX(-100%)}
+}
+
 .hero{
 padding:110px 7%;
 background:linear-gradient(90deg,rgba(7,29,58,.92),rgba(7,29,58,.48)),
@@ -42,7 +66,7 @@ color:#fff
 }
 
 .hero h1{font-size:56px;margin-bottom:18px}
-.hero p{font-size:20px;max-width:720px;line-height:1.7}
+.hero p{font-size:20px;max-width:820px;line-height:1.7}
 
 section{padding:75px 7%}
 
@@ -63,7 +87,7 @@ margin-bottom:15px
 
 .section-subtitle{
 text-align:center;
-max-width:780px;
+max-width:820px;
 margin:0 auto 45px;
 color:#555;
 line-height:1.8;
@@ -116,7 +140,7 @@ font-size:13px!important;
 line-height:1.9!important;
 word-break:normal!important;
 overflow-wrap:normal!important;
-white-space:normal!important;
+white-space:normal!important
 }
 
 .info-card strong{
@@ -203,6 +227,7 @@ box-shadow:0 6px 18px rgba(0,0,0,.25)
 header{padding:14px 6%}
 .logo img{height:95px}
 nav{display:none}
+.ticker{font-size:14px;padding:11px 0}
 .hero{padding:90px 6%}
 .hero h1{font-size:40px}
 section{padding:60px 6%}
@@ -230,11 +255,17 @@ section{padding:60px 6%}
   </nav>
 </header>
 
+<div class="ticker">
+  <div class="ticker-track">
+    REQUEST A FREIGHT QUOTE • CALL OUR LOGISTICS TEAM • WHATSAPP SUPPORT • BUSINESS ENQUIRIES • CUSTOMER ASSISTANCE • PAN INDIA ROAD TRANSPORT SUPPORT
+  </div>
+</div>
+
 <section class="hero">
   <h1>Let's Connect</h1>
   <p>
-    Whether you need transport support, a freight quotation or business partnership,
-    our team is ready to assist you with reliable Pan India logistics solutions.
+    Get in touch with Prateek Road Carriers Private Limited for freight quotations,
+    transport enquiries, business support and dependable Pan India road logistics solutions.
   </p>
 </section>
 
@@ -242,7 +273,7 @@ section{padding:60px 6%}
   <div class="small-title">GET IN TOUCH</div>
   <h2 class="section-title">Contact Information</h2>
   <p class="section-subtitle">
-    Reach out to Prateek Road Carriers Private Limited for reliable road transport, freight movement and logistics coordination.
+    Reach our team for reliable road transport, freight movement, logistics coordination and business enquiries.
   </p>
 
   <div class="info-grid">
@@ -250,7 +281,7 @@ section{padding:60px 6%}
       <div class="icon">☎</div>
       <h3>Phone / WhatsApp</h3>
       <p><strong>+91 89786 77859</strong></p>
-      <p>We are just a call away to assist you.</p>
+      <p>Call or WhatsApp us for transport enquiries and quotations.</p>
     </div>
 
     <div class="info-card">
