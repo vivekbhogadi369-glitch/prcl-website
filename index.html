@@ -70,10 +70,11 @@
 .hero{
   min-height:92vh;
   background:
-  linear-gradient(90deg,rgba(11,60,136,.94),rgba(11,60,136,.70)),
+  linear-gradient(90deg,rgba(11,60,136,.88),rgba(11,60,136,.62)),
   url("home_hero.png");
   background-size:cover;
-  background-position:center;
+  background-position:70% center;
+  background-repeat:no-repeat;
   display:flex;
   align-items:center;
   padding:90px 7%;
@@ -184,7 +185,11 @@
       nav{display:none}
       .logo img{height:95px}
       .ticker{font-size:14px;padding:11px 0}
-      .hero{padding:75px 6%;min-height:90vh}
+      .hero{
+  min-height:90vh;
+  padding:75px 6%;
+  background-position:72% center;
+}
       .hero h1{font-size:39px}
       .hero p{font-size:18px}
       .hero-buttons a{width:100%;text-align:center;margin-right:0}
