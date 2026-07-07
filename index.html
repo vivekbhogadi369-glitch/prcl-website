@@ -24,12 +24,7 @@
       box-shadow:0 4px 18px rgba(0,0,0,0.08);
     }
 
-    .logo img{
-      height:150px;
-      width:auto;
-      display:block;
-      object-fit:contain;
-    }
+    .logo img{height:150px;width:auto;display:block;object-fit:contain}
 
     nav a{
       text-decoration:none;
@@ -39,7 +34,7 @@
       font-size:17px;
     }
 
-.ticker{
+    .ticker{
       background:#0B3C88;
       color:#ffffff;
       overflow:hidden;
@@ -48,39 +43,31 @@
       font-weight:700;
       font-size:15px;
       letter-spacing:1px;
-      border-top:1px solid rgba(255,255,255,0.08);
-      border-bottom:1px solid rgba(255,255,255,0.08);
-}
-.ticker-track{
+    }
+
+    .ticker-track{
       display:inline-block;
       white-space:nowrap;
-      will-change:transform;
       animation:tickerMove 25s linear infinite;
-}
-    
-@keyframes tickerMove{
-    from{
-        transform:translateX(100%);
     }
-    to{
-        transform:translateX(-100%);
+
+    @keyframes tickerMove{
+      from{transform:translateX(100%)}
+      to{transform:translateX(-100%)}
     }
-}
 
+    .hero{
+      min-height:92vh;
+      background:linear-gradient(90deg,rgba(11,60,136,.95),rgba(11,60,136,.72)),
+      url("https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=80");
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      padding:90px 7%;
+      color:#fff;
+    }
 
-.hero{
-  min-height:92vh;
-  background:
-  linear-gradient(90deg,rgba(11,60,136,.82),rgba(11,60,136,.38)),
-  url("home_hero.png");
-  background-size:cover;
-  background-position:center center;
-  background-repeat:no-repeat;
-  display:flex;
-  align-items:center;
-  padding:90px 7%;
-  color:#fff;
-}
     .hero-content{max-width:820px}
     .hero-badge{display:inline-block;background:#F58220;padding:10px 18px;border-radius:30px;font-size:14px;font-weight:800;margin-bottom:24px;letter-spacing:1px}
     .hero h1{font-size:58px;line-height:1.12;margin-bottom:24px;font-weight:900}
@@ -109,54 +96,14 @@
     .section-title{text-align:center;font-size:38px;color:#0B3C88;margin-bottom:18px}
     .section-subtitle{text-align:center;max-width:780px;margin:0 auto 40px;color:#555;line-height:1.7;font-size:18px}
 
-    .home-summary{background:#f5f8fc;text-align:center}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin-top:30px}
-    .card{background:#fff;padding:32px;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.08);border-top:5px solid #F58220;text-align:center}
-    .card h3{color:#0B3C88;font-size:22px;margin-bottom:12px}
-    .card p{color:#444;line-height:1.7;font-size:16px;margin-bottom:18px}
-    .card a{color:#F58220;font-weight:900;text-decoration:none}
-.industries{
-    background:#ffffff;
-}
+    .industries{background:#ffffff}
+    .industry-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:40px}
+    .industry-card{background:#fff;border-radius:14px;padding:30px 24px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.08);border-top:5px solid #0B3C88;transition:.3s}
+    .industry-card:hover{transform:translateY(-8px);box-shadow:0 14px 30px rgba(0,0,0,.12)}
+    .industry-icon{font-size:42px;margin-bottom:18px}
+    .industry-card h3{color:#0B3C88;font-size:21px;margin-bottom:12px}
+    .industry-card p{color:#555;line-height:1.7;font-size:15px}
 
-.industry-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:24px;
-    margin-top:40px;
-}
-
-.industry-card{
-    background:#fff;
-    border-radius:14px;
-    padding:30px 24px;
-    text-align:center;
-    box-shadow:0 8px 24px rgba(0,0,0,.08);
-    border-top:5px solid #0B3C88;
-    transition:.3s;
-}
-
-.industry-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 14px 30px rgba(0,0,0,.12);
-}
-
-.industry-icon{
-    font-size:42px;
-    margin-bottom:18px;
-}
-
-.industry-card h3{
-    color:#0B3C88;
-    font-size:21px;
-    margin-bottom:12px;
-}
-
-.industry-card p{
-    color:#555;
-    line-height:1.7;
-    font-size:15px;
-}
     .cta{background:#F58220;color:#fff;text-align:center}
     .cta h2{font-size:36px;margin-bottom:15px}
     .cta p{font-size:18px;margin-bottom:25px}
@@ -185,16 +132,7 @@
       nav{display:none}
       .logo img{height:95px}
       .ticker{font-size:14px;padding:11px 0}
-      .hero{
-  min-height:85vh;
-  padding:70px 6%;
-  background:
-  linear-gradient(90deg,rgba(11,60,136,.96),rgba(11,60,136,.82)),
-  url("home_hero.png");
-  background-size:cover;
-  background-position:88% center;
-  background-repeat:no-repeat;
-      }
+      .hero{padding:75px 6%;min-height:90vh;background-position:center}
       .hero h1{font-size:39px}
       .hero p{font-size:18px}
       .hero-buttons a{width:100%;text-align:center;margin-right:0}
@@ -213,18 +151,19 @@
   </div>
 
   <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="services.html">Services</a>
-  <a href="network.html">Network</a>
-  <a href="clients.html">Clients</a>
-  <a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="network.html">Network</a>
+    <a href="clients.html">Clients</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
+
 <div class="ticker">
-    <div class="ticker-track">
-        PAN INDIA ROAD TRANSPORT • FULL TRUCK LOAD • PART LOAD TRANSPORT • INDUSTRIAL LOGISTICS • COMMERCIAL FREIGHT • TIMELY DELIVERY • TRUSTED TRANSPORT PARTNER • DELIVERING TRUST ACROSS MILES
-    </div>
+  <div class="ticker-track">
+    PAN INDIA ROAD TRANSPORT • FULL TRUCK LOAD • PART LOAD TRANSPORT • INDUSTRIAL LOGISTICS • COMMERCIAL FREIGHT • TIMELY DELIVERY • TRUSTED TRANSPORT PARTNER • DELIVERING TRUST ACROSS MILES
+  </div>
 </div>
 
 <section class="hero">
@@ -250,80 +189,26 @@
   </div>
 </section>
 
+<section class="industries">
+  <h2 class="section-title">Industries We Serve Across India</h2>
 
-  <section class="industries">
+  <p class="section-subtitle">
+    Supporting businesses across diverse industries with dependable, efficient and nationwide transport solutions.
+  </p>
 
-<h2 class="section-title">Industries We Serve Across India</h2>
-
-<p class="section-subtitle">
-Supporting businesses across diverse industries with dependable, efficient and nationwide transport solutions.
-</p>
-
-<div class="industry-grid">
-
-<div class="industry-card">
-<div class="industry-icon">🏭</div>
-<h3>Steel & Metals</h3>
-<p>Reliable transportation of steel, coils, pipes, structural steel and industrial raw materials.</p>
-</div>
-
-<div class="industry-card">
-<div class="industry-icon">🧱</div>
-<h3>Cement & Construction</h3>
-<p>Efficient movement of cement, building materials and infrastructure project supplies.</p>
-</div>
-
-<div class="industry-card">
-<div class="industry-icon">🚗</div>
-<h3>Automobile</h3>
-<p>Transportation of automobiles, spare parts, tyres and automotive components.</p>
-</div>
-
-<div class="industry-card">
-<div class="industry-icon">🥃</div>
-<h3>Distilleries & Beverages</h3>
-<p>Safe transportation of bottled beverages, IMFL products and distillery supplies.</p>
-</div>
-
-<div class="industry-card">
-<div class="industry-icon">💊</div>
-<h3>Pharmaceuticals</h3>
-<p>Reliable logistics support for medicines, healthcare products and medical supplies.</p>
-</div>
-
-<div class="industry-card">
-<div class="industry-icon">🛒</div>
-<h3>FMCG</h3>
-<p>Fast movement of packaged food, personal care and consumer products.</p>
-</div>
-
-<div class="industry-card">
-<div class="industry-icon">⚙️</div>
-<h3>Engineering</h3>
-<p>Transportation of heavy machinery, engineering equipment and industrial components.</p>
-</div>
-
-<div class="industry-card">
-<div class="industry-icon">🌾</div>
-<h3>Agriculture</h3>
-<p>Efficient logistics for agricultural produce, food products and agro commodities.</p>
-</div>
-
-<div class="industry-card">
-<div class="industry-icon">📦</div>
-<h3>Retail & Distribution</h3>
-<p>Dependable transportation supporting distributors, warehouses and retail businesses.</p>
-</div>
-
-<div class="industry-card">
-<div class="industry-icon">🏢</div>
-<h3>Corporate Logistics</h3>
-<p>Customized logistics solutions for manufacturers, traders and commercial enterprises.</p>
-</div>
-
-</div>
-
-  </section>
+  <div class="industry-grid">
+    <div class="industry-card"><div class="industry-icon">🏭</div><h3>Steel & Metals</h3><p>Reliable transportation of steel, coils, pipes, structural steel and industrial raw materials.</p></div>
+    <div class="industry-card"><div class="industry-icon">🧱</div><h3>Cement & Construction</h3><p>Efficient movement of cement, building materials and infrastructure project supplies.</p></div>
+    <div class="industry-card"><div class="industry-icon">🚗</div><h3>Automobile</h3><p>Transportation of automobiles, spare parts, tyres and automotive components.</p></div>
+    <div class="industry-card"><div class="industry-icon">🥃</div><h3>Distilleries & Beverages</h3><p>Safe transportation of bottled beverages, IMFL products and distillery supplies.</p></div>
+    <div class="industry-card"><div class="industry-icon">💊</div><h3>Pharmaceuticals</h3><p>Reliable logistics support for medicines, healthcare products and medical supplies.</p></div>
+    <div class="industry-card"><div class="industry-icon">🛒</div><h3>FMCG</h3><p>Fast movement of packaged food, personal care and consumer products.</p></div>
+    <div class="industry-card"><div class="industry-icon">⚙️</div><h3>Engineering</h3><p>Transportation of heavy machinery, engineering equipment and industrial components.</p></div>
+    <div class="industry-card"><div class="industry-icon">🌾</div><h3>Agriculture</h3><p>Efficient logistics for agricultural produce, food products and agro commodities.</p></div>
+    <div class="industry-card"><div class="industry-icon">📦</div><h3>Retail & Distribution</h3><p>Dependable transportation supporting distributors, warehouses and retail businesses.</p></div>
+    <div class="industry-card"><div class="industry-icon">🏢</div><h3>Corporate Logistics</h3><p>Customized logistics solutions for manufacturers, traders and commercial enterprises.</p></div>
+  </div>
+</section>
 
 <section class="cta">
   <h2>Need Reliable Transport Support?</h2>
