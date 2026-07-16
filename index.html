@@ -72,6 +72,28 @@
       width:100%;
     }
 
+    .menu-toggle{
+      display:none;
+      width:48px;
+      height:44px;
+      border:none;
+      border-radius:8px;
+      background:#0B3C88;
+      cursor:pointer;
+      padding:10px;
+      flex-direction:column;
+      justify-content:center;
+      gap:5px;
+    }
+
+    .menu-toggle span{
+      display:block;
+      width:100%;
+      height:3px;
+      border-radius:3px;
+      background:#fff;
+    }
+
     .ticker{
       background:#0B3C88;
       color:#fff;
@@ -231,7 +253,7 @@
     }
 
     .industries{
-      background:#fff;
+      background:#f5f8fc;
     }
 
     .industry-grid{
@@ -248,6 +270,11 @@
       text-align:center;
       box-shadow:0 8px 24px rgba(0,0,0,.08);
       border-top:5px solid #0B3C88;
+      min-height:230px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
       transition:.28s;
     }
 
@@ -375,7 +402,37 @@
         height:105px;
       }
 
+      .menu-toggle{
+        display:flex;
+      }
+
       nav{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        background:#fff;
+        box-shadow:0 12px 25px rgba(0,0,0,.12);
+        border-top:3px solid #F58220;
+      }
+
+      nav.active{
+        display:flex;
+      }
+
+      nav a{
+        width:100%;
+        padding:16px 7%;
+        margin:0;
+        border-bottom:1px solid #e8edf3;
+        font-size:16px;
+      }
+
+      nav a::after{
         display:none;
       }
 
@@ -412,6 +469,15 @@
     }
 
     @media(max-width:600px){
+      .logo img{
+        height:92px;
+      }
+
+      .menu-toggle{
+        width:45px;
+        height:42px;
+      }
+
       .hero{
         padding:60px 6%;
       }
@@ -463,6 +529,10 @@
         grid-template-columns:1fr;
       }
 
+      .industry-card{
+        min-height:auto;
+      }
+
       .cta h2{
         font-size:29px;
       }
@@ -483,11 +553,23 @@
 
 <header>
   <div class="logo">
-    <img src="file_000000003c9871f5a6f0ba67ef7f0c51.png"
-         alt="Prateek Road Carriers Logo">
+    <img
+      src="file_000000003c9871f5a6f0ba67ef7f0c51.png"
+      alt="Prateek Road Carriers Logo">
   </div>
 
-  <nav>
+  <button
+    class="menu-toggle"
+    id="menuToggle"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav id="mainNavigation">
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="services.html">Services</a>
@@ -522,13 +604,15 @@
     </p>
 
     <div class="hero-buttons">
-      <a class="btn-orange"
-         href="https://wa.me/918978677859">
+      <a
+        class="btn-orange"
+        href="https://wa.me/918978677859">
         Get a Quote
       </a>
 
-      <a class="btn-white"
-         href="tel:+918978677859">
+      <a
+        class="btn-white"
+        href="tel:+918978677859">
         Call Now
       </a>
     </div>
@@ -668,6 +752,7 @@
 
     <div>
       <h4>Email</h4>
+
       <p>
         <a href="mailto:manish@prateekroadcarriers.com">
           manish@prateekroadcarriers.com
@@ -698,10 +783,32 @@
 
 </footer>
 
-<a class="whatsapp-float"
-   href="https://wa.me/918978677859">
+<a
+  class="whatsapp-float"
+  href="https://wa.me/918978677859">
   WhatsApp
 </a>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNavigation = document.getElementById("mainNavigation");
+
+  menuToggle.addEventListener("click", function () {
+    const menuIsOpen = mainNavigation.classList.toggle("active");
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      menuIsOpen ? "true" : "false"
+    );
+  });
+
+  mainNavigation.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      mainNavigation.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+</script>
 
 </body>
 </html>
