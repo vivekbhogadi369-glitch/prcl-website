@@ -13,7 +13,27 @@
     header{width:100%;padding:20px 7%;background:#fff;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:999;min-height:120px;box-shadow:0 4px 18px rgba(0,0,0,.08)}
     .logo img{height:150px;width:auto;display:block;object-fit:contain}
     nav a{text-decoration:none;margin-left:26px;color:#0B3C88;font-weight:800;font-size:17px}
+.menu-toggle{
+  display:none;
+  width:46px;
+  height:42px;
+  border:none;
+  border-radius:8px;
+  background:#0B3C88;
+  cursor:pointer;
+  padding:10px;
+  flex-direction:column;
+  justify-content:center;
+  gap:5px;
+}
 
+.menu-toggle span{
+  display:block;
+  width:100%;
+  height:3px;
+  border-radius:3px;
+  background:#fff;
+}
     .ticker{
       background:#0B3C88;
       color:#ffffff;
@@ -36,16 +56,70 @@
       to{transform:translateX(-100%)}
     }
 
-    .page-hero{padding:120px 7%;color:#fff;background:linear-gradient(90deg,rgba(11,60,136,.95),rgba(11,60,136,.7)),url("https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1600&q=80");background-size:cover;background-position:center}
-    .page-hero h1{font-size:52px;margin-bottom:18px}
-    .page-hero p{font-size:20px;max-width:850px;line-height:1.7}
+    .page-hero{
+  min-height:55vh;
+  padding:95px 7%;
+  color:#fff;
+  background:
+    linear-gradient(90deg,rgba(11,60,136,.90),rgba(11,60,136,.60)),
+    url("https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1600&q=80");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.page-hero h1{
+  font-size:54px;
+  line-height:1.15;
+  font-weight:900;
+  margin-bottom:20px;
+  text-shadow:0 3px 12px rgba(0,0,0,.25);
+}
+
+.page-hero p{
+  font-size:20px;
+  max-width:800px;
+  line-height:1.75;
+  color:#f5f7fb;
+}
 
     section{padding:75px 7%}
-    .section-title{text-align:center;font-size:38px;color:#0B3C88;margin-bottom:18px}
+    .section-title{
+  text-align:center;
+  font-size:38px;
+  color:#0B3C88;
+  margin-bottom:18px;
+}
+
+.section-title::after{
+  content:"";
+  display:block;
+  width:62px;
+  height:4px;
+  background:#F58220;
+  border-radius:4px;
+  margin:14px auto 0;
+}
     .section-subtitle{text-align:center;max-width:900px;margin:0 auto 45px;color:#555;line-height:1.8;font-size:18px}
 
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
-    .card{background:#fff;padding:32px;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.08);border-top:5px solid #F58220}
+    .card{
+  background:#fff;
+  padding:36px 30px;
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,.10);
+  border-top:5px solid #F58220;
+  transition:.30s;
+  min-height:240px;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 18px 36px rgba(0,0,0,.14);
+}
     .card h3{color:#0B3C88;font-size:22px;margin-bottom:12px}
     .card p{color:#444;line-height:1.7;font-size:16px}
 
@@ -64,7 +138,31 @@
 
     @media(max-width:768px){
       header{padding:14px 6%;min-height:95px}
-      nav{display:none}
+      nav{
+  display:none;
+}
+
+.menu-toggle{
+  display:flex;
+}
+      nav.active{
+  display:flex;
+  position:absolute;
+  top:100%;
+  left:0;
+  width:100%;
+  background:#fff;
+  flex-direction:column;
+  align-items:stretch;
+  box-shadow:0 12px 25px rgba(0,0,0,.12);
+  border-top:3px solid #F58220;
+}
+
+nav.active a{
+  margin-left:0;
+  padding:16px 7%;
+  border-bottom:1px solid #e5eaf0;
+}
       .logo img{height:95px}
       .ticker{font-size:14px;padding:11px 0}
       .page-hero{padding:90px 6%}
@@ -74,6 +172,11 @@
     }
   </style>
 </head>
+  <script>
+function toggleMenu(){
+  document.getElementById("mainNav").classList.toggle("active");
+}
+  </script>
 
 <body>
 
@@ -82,14 +185,19 @@
     <img src="file_000000003c9871f5a6f0ba67ef7f0c51.png" alt="Prateek Road Carriers Logo">
   </div>
 
-  <nav>
+  <nav id="mainNav">
   <a href="index.html">Home</a>
   <a href="about.html">About Us</a>
   <a href="services.html">Services</a>
   <a href="network.html">Network</a>
   <a href="clients.html">Clients</a>
   <a href="contact.html">Contact</a>
-  </nav>
+  <nav id="mainNav">
+  <button class="menu-toggle" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+  </button>
 </header>
 
 <div class="ticker">
@@ -112,22 +220,56 @@
   </p>
 </section>
 
+  <section>
+
+<h2 class="section-title">Why Choose PRCL</h2>
+
+<p class="section-subtitle">
+Businesses across India trust PRCL for dependable logistics coordination, timely deliveries and customer-focused transport solutions.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>🚚 Pan India Network</h3>
+<p>Reliable transportation support across major industrial corridors and commercial destinations throughout India.</p>
+</div>
+
+<div class="card">
+<h3>⏰ Timely Delivery</h3>
+<p>Well-planned logistics coordination to help businesses achieve timely and dependable deliveries.</p>
+</div>
+
+<div class="card">
+<h3>🛡️ Safe Transportation</h3>
+<p>Every shipment is managed with operational discipline, responsibility and a strong commitment to cargo safety.</p>
+</div>
+
+<div class="card">
+<h3>🤝 Customer First Approach</h3>
+<p>We focus on long-term relationships by providing transparent communication and responsive customer support.</p>
+</div>
+
+</div>
+
+  </section>
+
 <section class="light">
   <h2 class="section-title">Our Foundation</h2>
 
   <div class="grid">
     <div class="card">
-      <h3>Our Vision</h3>
+      <h3>👁️ Our Vision</h3>
       <p>To become a trusted Pan India road transport partner known for reliability, professionalism and long-term customer relationships.</p>
     </div>
 
     <div class="card">
-      <h3>Our Mission</h3>
+      <h3>🎯 Our Mission</h3>
       <p>To support businesses with safe, timely and efficient road freight coordination through a dependable transporter network.</p>
     </div>
 
     <div class="card">
-      <h3>Our Promise</h3>
+      <h3>🤝 Our Promise</h3>
       <p>To deliver every transport commitment with transparency, responsibility and customer-focused service.</p>
     </div>
   </div>
@@ -138,32 +280,32 @@
 
   <div class="grid">
     <div class="card">
-      <h3>Trust</h3>
+      <h3>🤝 Trust</h3>
       <p>We believe long-term business is built through honesty, dependable service and consistent communication.</p>
     </div>
 
     <div class="card">
-      <h3>Reliability</h3>
+      <h3>🚚 Reliability</h3>
       <p>Our transport coordination focuses on timely planning, route support and smooth goods movement.</p>
     </div>
 
     <div class="card">
-      <h3>Professionalism</h3>
+      <h3>💼 Professionalism</h3>
       <p>We maintain a corporate approach in customer handling, documentation and logistics support.</p>
     </div>
 
     <div class="card">
-      <h3>Nationwide Reach</h3>
+      <h3>🇮🇳 Nationwide Reach</h3>
       <p>PRCL supports transport movement across major Indian routes through a trusted network.</p>
     </div>
 
     <div class="card">
-      <h3>Safety</h3>
+      <h3>🛡️ Safety</h3>
       <p>Every consignment is handled with care, operational discipline and a commitment to secure transportation.</p>
     </div>
 
     <div class="card">
-      <h3>Commitment</h3>
+      <h3>⭐ Commitment</h3>
       <p>We build long-term business relationships through transparency, accountability and dependable logistics support.</p>
     </div>
   </div>
